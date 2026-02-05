@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>المنيو - بوب ويتش | ساندويتشات وبرجر في طنطا</title>
+    <meta name="description" content="تصفح منيو بوب ويتش المحدث. ساندويتشات، برجر، كومبو، بطاطس، ومشروبات.">
+    <meta name="keywords" content="منيو بوب ويتش, قائمة الطعام, ساندويتشات, برجر, أسعار بوب ويتش">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bobwich.com/menu.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bobwich.com/menu.html">
+    <meta property="og:title" content="المنيو - بوب ويتش | ساندويتشات وبرجر">
+    <meta property="og:description" content="شوف منيو بوب ويتش الكامل بالصور والأسعار.">
+    <meta property="og:image" content="./menu 1.PNG">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./Logo.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <!-- Inline styles for gallery fallback -->
+    <style>
+        .menu-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem 0;
+        }
+
+        .gallery-item {
+            cursor: pointer;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-caption {
+            padding: 1rem;
+            background: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Mobile Toggle Fix */
+        .mobile-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="index.html" class="logo">
+                <img src="./Logo.png" alt="بوب ويتش">
+            </a>
+
+            <div class="nav-links">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="menu.html" class="nav-link active">المنيو</a></li>
+                    <li><a href="about.html" class="nav-link">احنا مين!</a></li>
+                    <li><a href="contact.html" class="nav-link">كلمنا</a></li>
+                    <li>
+                        <a href="contact.html" class="btn btn-primary btn-sm">يلا نطلب</a>
+                    </li>
+                </ul>
+
+                <div class="mobile-toggle" id="mobileToggle" role="button" tabindex="0" aria-label="فتح القائمة">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header"
+        style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./header-bg.jpg');">
+        <div class="container">
+            <h1>منيو بوب ويتش</h1>
+            <p>أحلى طعم في طنطا - تصفح القائمة كاملة</p>
+        </div>
+    </header>
+
+    <!-- Menu Gallery Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>قائمة الطعام</h2>
+                <div class="separator"></div>
+                <p>اضغط على الصورة للتكبير</p>
+            </div>
+
+            <div class="menu-gallery">
+                <!-- Gallery Items generated based on menu.js config -->
+                <div class="gallery-item" onclick="openLightbox('./menu 7.PNG', 'ساندويتشات الدجاج')">
+                    <img src="./menu 7.PNG" alt="ساندويتشات الدجاج" loading="lazy">
+                    <div class="gallery-caption">ساندويتشات الدجاج</div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('./menu 6.PNG', 'ساندويتشات اللحوم والبرجر')">
+                    <img src="./menu 6.PNG" alt="ساندويتشات اللحوم والبرجر" loading="lazy">
+                    <div class="gallery-caption">ساندويتشات اللحوم والبرجر</div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('./menu 5.PNG', 'سبيشيال برجر والمشروبات')">
+                    <img src="./menu 5.PNG" alt="سبيشيال برجر والمشروبات" loading="lazy">
+                    <div class="gallery-caption">سبيشيال برجر والمشروبات</div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('./menu 4.PNG', 'سناكس وساندويتشات الفارم')">
+                    <img src="./menu 4.PNG" alt="سناكس وساندويتشات الفارم" loading="lazy">
+                    <div class="gallery-caption">سناكس وساندويتشات الفارم</div>
+                </div>
+                <!-- Menu 3 skipped or included? Included in JS array -->
+                <div class="gallery-item" onclick="openLightbox('./menu 3.PNG', 'ميكسات الفارم')">
+                    <img src="./menu 3.PNG" alt="ميكسات الفارم" loading="lazy">
+                    <div class="gallery-caption">ميكسات الفارم</div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('./menu 1.PNG', 'المنيو الكامل 1')">
+                    <img src="./menu 1.PNG" alt="المنيو الكامل 1" loading="lazy">
+                    <div class="gallery-caption">المنيو الكامل 1</div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('./menu 2.PNG', 'المنيو الكامل 2')">
+                    <img src="./menu 2.PNG" alt="المنيو الكامل 2" loading="lazy">
+                    <div class="gallery-caption">المنيو الكامل 2</div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="contact.html" class="btn btn-primary btn-lg">اطلب الآن عبر واتساب</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="./Logo.png" alt="بوب ويتش">
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>فروعنا</h3>
+                    <p>📍 شارع البيئة - سور الإستاد</p>
+                    <p>📍 شارع سعيد - أمام كلية تجارة</p>
+                    <p>📍 شارع معاوية مع سعيد</p>
+                    <p>📞 <a href="tel:+201222922925" style="color: inherit;">0122 2922 925</a></p>
+                    <p>🕐 السبت-الخميس: 12 ظ - 3 ص | الجمعة: 2 م - 3 ص | الأحد: مغلق</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <div class="footer-links">
+                        <a href="index.html">الرئيسية</a>
+                        <a href="menu.html">المنيو</a>
+                        <a href="about.html">احنا مين!</a>
+                        <a href="contact.html">كلمنا</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>تابعنا</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/bobwich.tanta" class="social-link facebook" target="_blank"
+                            aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/bobwich_tanta" class="social-link instagram" target="_blank"
+                            aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.069-4.85.069-3.204 0-3.584-.012-4.849-.069-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@bobwich.eg" class="social-link tiktok" target="_blank"
+                            aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 مطعم بوب ويتش - جميع الحقوق محفوظة.</p>
+                <p>صنع في مصر ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-prev" onclick="navigateLightbox(-1)">&#10095;</button>
+        <button class="lightbox-next" onclick="navigateLightbox(1)">&#10094;</button>
+
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+            <div class="lightbox-counter" id="lightboxCounter"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/menu.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+
+</html>
